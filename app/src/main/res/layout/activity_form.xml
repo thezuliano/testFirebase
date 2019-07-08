@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Registre el nuevo usuario!"
+            android:text="Creación de Cliente"
             android:textSize="24sp" />
 
         <EditText
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
-            android:text="Registrar usuario" />
+            android:text="Registrar cliente" />
 
     </LinearLayout>
 

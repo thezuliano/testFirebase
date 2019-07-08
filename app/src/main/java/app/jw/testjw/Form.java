@@ -28,7 +28,7 @@ public class Form extends AppCompatActivity {
         fechaNac = findViewById(R.id.txtFechaNac);
         guardar = findViewById(R.id.btnGuardar);
 
-        TablaUsuarios = FirebaseDatabase.getInstance().getReference().child("USUARIOS");
+        TablaUsuarios = FirebaseDatabase.getInstance().getReference().child("CLIENTES");
 
         guardar.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -47,5 +47,13 @@ public class Form extends AppCompatActivity {
 
         TablaUsuarios.push().setValue(nuevoUsuario);
         Toast.makeText(getApplicationContext(), "Usuario agregado con éxito", Toast.LENGTH_SHORT).show();
+        limpiarCampos();
+    }
+
+    public void limpiarCampos(){
+        nombre.getText().clear();
+        apellido.getText().clear();
+        edad.getText().clear();
+        fechaNac.getText().clear();
     }
 }

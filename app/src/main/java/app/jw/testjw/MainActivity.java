@@ -72,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         };
     }
 
+    private void openForm(){
+        Intent intent = new Intent(this, Form.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -91,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "error login firebase", Toast.LENGTH_SHORT).show();
+                } else {
+                    openForm();
                 }
             }
         });

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">loginandsavejw</string>
+    <string name="app_name">LoginJW</string>
     <string name="facebook_app_id">377663579548012</string>
     <string name="fb_login_protocol_scheme">fb377663579548012</string>
 </resources>

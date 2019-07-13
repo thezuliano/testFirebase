@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openForm(){
-        Intent intent = new Intent(this, Form.class);
+        Intent intent = new Intent(this, ListClients.class);
         startActivity(intent);
     }
 

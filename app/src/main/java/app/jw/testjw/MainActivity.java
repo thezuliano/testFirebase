@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CallbackManager callbackManager;
     private LoginButton loginButton;
+    private ProgressBar progressBar;
     public FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
 
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         loginButton = findViewById(R.id.login_button);
         loginButton.setReadPermissions("email");
+        progressBar = findViewById(R.id.progressBar);
 
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -87,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleFacebookAccesToken(AccessToken accessToken) {
+        progressBar.setVisibility(View.VISIBLE);
+        loginButton.setVisibility(View.GONE);
+
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
@@ -94,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
                 if (!task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "error login firebase", Toast.LENGTH_SHORT).show();
                 } else {
+                    progressBar.setVisibility(View.GONE);
+                    loginButton.setVisibility(View.VISIBLE);
                     openForm();
                 }
             }

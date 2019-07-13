@@ -27,6 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Creación de Cliente"
+            android:backgroundTint="@color/com_facebook_blue"
+            android:textColor="#3F51B5"
             android:textSize="24sp" />
 
         <EditText
@@ -35,7 +37,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nombre"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/com_facebook_blue"
+            app:backgroundTint="@color/com_facebook_blue" />
 
         <EditText
             android:id="@+id/txtApellido"
@@ -43,7 +48,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Apellido"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/com_facebook_blue"
+            app:backgroundTint="@color/com_facebook_blue" />
 
         <EditText
             android:id="@+id/txtEdad"
@@ -51,7 +59,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Edad"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/com_facebook_blue"
+            app:backgroundTint="@color/com_facebook_blue" />
 
         <EditText
             android:id="@+id/txtFechaNac"
@@ -59,7 +70,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Fecha de nacimiento"
-            android:inputType="date" />
+            android:inputType="date"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/com_facebook_blue"
+            app:backgroundTint="@color/com_facebook_blue" />
 
         <Button
             android:id="@+id/btnGuardar"

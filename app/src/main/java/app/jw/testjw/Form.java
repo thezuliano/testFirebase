@@ -22,6 +22,7 @@ public class Form extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+        setTitle("Registro de Clientes");
         nombre = findViewById(R.id.txtNombre);
         apellido = findViewById(R.id.txtApellido);
         edad = findViewById(R.id.txtEdad);

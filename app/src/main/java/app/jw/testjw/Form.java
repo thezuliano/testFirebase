@@ -41,10 +41,10 @@ public class Form extends AppCompatActivity {
 
     public void guardarNuevoUsuario (){
         User nuevoUsuario = new User();
-        nuevoUsuario.Nombre = nombre.getText().toString().trim();
-        nuevoUsuario.Apellido = apellido.getText().toString().trim();
-        nuevoUsuario.Edad = Integer.parseInt(edad.getText().toString().trim());
-        nuevoUsuario.FechaNacimiento = fechaNac.getText().toString().trim();
+        nuevoUsuario.setNombre(nombre.getText().toString().trim());
+        nuevoUsuario.setApellido(apellido.getText().toString().trim());
+        nuevoUsuario.setEdad(Integer.parseInt(edad.getText().toString().trim()));
+        nuevoUsuario.setFechaNacimiento(fechaNac.getText().toString().trim());
 
         TablaUsuarios.push().setValue(nuevoUsuario);
         Toast.makeText(getApplicationContext(), "Usuario agregado con éxito", Toast.LENGTH_SHORT).show();
